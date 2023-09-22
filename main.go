@@ -10,6 +10,8 @@ func main() {
         fmt.Println(rnumberIncrement())
         fmt.Println(multliply())
 	fmt.Println(passwordGenerator())
+	fmt.Println(fact())
+	
 }
 
 func numberIncrement(){
@@ -41,7 +43,25 @@ func GenerateRandomPassword(length int) string {
 
 	return string(password)
 }
+func fact() {
+    var num int
+    fmt.Print("Enter a number: ")
+    fmt.Scan(&num)
 
+    // Check if the input number is negative
+    if num < 0 {
+        fmt.Println("Factorial is not defined for negative numbers.")
+        return
+    }
+
+    // Calculate the factorial
+    result := 1
+    for i := 1; i <= num; i++ {
+        result *= i
+    }
+
+    fmt.Printf("Factorial of %d is %d\n", num, result)
+}
 func passwordGenerator() {
 	passwordLength := 16 // Change this to your desired password length
 
